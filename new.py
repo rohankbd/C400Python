@@ -3,7 +3,7 @@ import requests
 url = "https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv"
 response = requests.get(url)
 
-csv_file = "/tmp/taxi_zone_lookup.csv"
+csv_file = "/var/lib/jenkins/taxi_zone_lookup.csv"
 with open(csv_file, "wb") as file:
     file.write(response.content)
 
